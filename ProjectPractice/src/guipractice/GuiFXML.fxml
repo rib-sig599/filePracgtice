@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="560.0" prefWidth="800.0" style="-fx-background-color: darkseagreen;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="guipractice.GuiFXMLController">
+   <children>
+      <Label layoutX="179.0" layoutY="471.0" prefHeight="22.0" prefWidth="22.0" text="Bet">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentBet" layoutX="205.0" layoutY="473.0" prefHeight="18.0" prefWidth="22.0" text="\$" />
+      <Label layoutX="50.0" layoutY="15.0" prefHeight="16.0" prefWidth="83.0" text="Dealers Hand">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="206.0" layoutY="15.0" prefHeight="16.0" prefWidth="90.0" text="Player 1s Hand">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Button fx:id="playButton" layoutX="158.0" layoutY="520.0" mnemonicParsing="false" onAction="#playClick" prefHeight="35.0" prefWidth="54.0" style="-fx-background-color: springgreen;" text="Play">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <TextField fx:id="betAmuont1" layoutX="218.0" layoutY="469.0" prefHeight="26.0" prefWidth="47.0" />
+      <Label fx:id="bettingLimit" layoutX="313.0" layoutY="547.0" prefHeight="26.0" prefWidth="170.0" text="Enter a bet between 1 - 100.">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="353.0" layoutY="15.0" prefHeight="16.0" prefWidth="90.0" text="Player 2s Hand">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="484.0" layoutY="15.0" prefHeight="16.0" prefWidth="90.0" text="Player 3s Hand">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="663.0" layoutY="15.0" prefHeight="16.0" prefWidth="90.0" text="Player 4s Hand">
+         <font>
+            <Font name="Berlin Sans FB" size="13.0" />
+         </font>
+      </Label>
+      <Pane layoutX="16.0" layoutY="31.0" prefHeight="404.0" prefWidth="144.0" style="-fx-border-color: black;">
+         <children>
+            <TextArea fx:id="dealterText" layoutX="6.0" layoutY="14.0" prefHeight="232.0" prefWidth="133.0" style="-fx-border-color: red; -fx-background-color: white;" />
+            <Label layoutX="11.0" layoutY="269.0" prefHeight="22.0" prefWidth="47.0" text="SCORE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="dealerScore" layoutX="58.0" layoutY="269.0" prefHeight="22.0" prefWidth="47.0" text=":" />
+         </children></Pane>
+      <Pane layoutX="170.0" layoutY="39.0" prefHeight="404.0" prefWidth="144.0" style="-fx-border-color: black;">
+         <children>
+            <Label layoutX="8.0" layoutY="346.0" prefHeight="22.0" prefWidth="47.0" text="SCORE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentScore1" layoutX="55.0" layoutY="346.0" prefHeight="26.0" prefWidth="83.0" text=":" />
+            <TextArea fx:id="playerOneText" layoutX="5.0" layoutY="14.0" prefHeight="232.0" prefWidth="133.0" style="-fx-border-color: blue; -fx-wrap-text: red;">
+               <font>
+                  <Font name="Berlin Sans FB" size="13.0" />
+               </font></TextArea>
+            <Button fx:id="hitButoon1" layoutX="31.0" layoutY="267.0" mnemonicParsing="false" onAction="#hitClick1" prefHeight="10.0" prefWidth="33.0" style="-fx-background-color: indianred;" text="Hit">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="standButton1" layoutX="72.0" layoutY="266.0" mnemonicParsing="false" onAction="#standClick1" prefHeight="5.0" prefWidth="47.0" style="-fx-background-color: indianred;" text="Stand" />
+            <Button fx:id="DoubleDownButton1" layoutX="27.0" layoutY="301.0" mnemonicParsing="false" onAction="#dDownClick1" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: indianred;" text="Double Down" />
+            <Label fx:id="outcome1" layoutX="6.0" layoutY="372.0" prefHeight="26.0" prefWidth="133.0" />
+         </children></Pane>
+      <Pane layoutX="326.0" layoutY="39.0" prefHeight="404.0" prefWidth="144.0" style="-fx-border-color: black;">
+         <children>
+            <TextArea fx:id="playerTwoText" layoutX="6.0" layoutY="14.0" prefHeight="232.0" prefWidth="133.0" style="-fx-border-color: blue; -fx-background-color: white;" />
+            <Label layoutX="19.0" layoutY="349.0" prefHeight="22.0" prefWidth="47.0" text="SCORE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentScore2" layoutX="64.0" layoutY="351.0" prefHeight="22.0" prefWidth="75.0" text=":" />
+            <Button fx:id="hitButoon2" layoutX="26.0" layoutY="266.0" mnemonicParsing="false" onAction="#hitClick2" prefHeight="10.0" prefWidth="33.0" style="-fx-background-color: indianred;" text="Hit">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="standButton2" layoutX="64.0" layoutY="264.0" mnemonicParsing="false" onAction="#standClick2" prefHeight="5.0" prefWidth="47.0" style="-fx-background-color: indianred;" text="Stand" />
+            <Button fx:id="DoubleDownButton2" layoutX="21.0" layoutY="305.0" mnemonicParsing="false" onAction="#dDownClick2" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: indianred;" text="Double Down" />
+            <Label fx:id="outcome2" layoutX="6.0" layoutY="371.0" prefHeight="26.0" prefWidth="133.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="477.0" layoutY="39.0" prefHeight="404.0" prefWidth="144.0" style="-fx-border-color: black;">
+         <children>
+            <TextArea fx:id="playerThreeText" layoutX="6.0" layoutY="14.0" prefHeight="232.0" prefWidth="133.0" style="-fx-border-color: blue; -fx-background-color: white;" />
+            <Label layoutX="14.0" layoutY="347.0" prefHeight="22.0" prefWidth="47.0" text="SCORE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentScore3" layoutX="62.0" layoutY="346.0" prefHeight="22.0" prefWidth="75.0" text=":" />
+            <Button fx:id="hitButoon3" layoutX="19.0" layoutY="271.0" mnemonicParsing="false" onAction="#hitClick3" prefHeight="10.0" prefWidth="33.0" style="-fx-background-color: indianred;" text="Hit">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="standButton3" layoutX="62.0" layoutY="270.0" mnemonicParsing="false" onAction="#standClick3" prefHeight="5.0" prefWidth="47.0" style="-fx-background-color: indianred;" text="Stand" />
+            <Button fx:id="DoubleDownButton3" layoutX="16.0" layoutY="303.0" mnemonicParsing="false" onAction="#dDownClick3" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: indianred;" text="Double Down" />
+            <Label fx:id="outcome3" layoutX="6.0" layoutY="368.0" prefHeight="26.0" prefWidth="133.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="638.0" layoutY="39.0" prefHeight="404.0" prefWidth="144.0" style="-fx-border-color: black;">
+         <children>
+            <TextArea fx:id="playerFourText" layoutX="6.0" layoutY="14.0" prefHeight="232.0" prefWidth="133.0" style="-fx-border-color: blue; -fx-background-color: white;" />
+            <Label layoutX="14.0" layoutY="345.0" prefHeight="22.0" prefWidth="47.0" text="SCORE">
+               <font>
+                  <Font name="Berlin Sans FB" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="currentScore4" layoutX="61.0" layoutY="345.0" prefHeight="22.0" prefWidth="75.0" text=":" />
+            <Button fx:id="hitButoon4" layoutX="16.0" layoutY="276.0" mnemonicParsing="false" onAction="#hitClick4" prefHeight="10.0" prefWidth="33.0" style="-fx-background-color: indianred;" text="Hit">
+               <font>
+                  <Font name="Berlin Sans FB" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="standButton4" layoutX="61.0" layoutY="275.0" mnemonicParsing="false" onAction="#standClick4" prefHeight="5.0" prefWidth="47.0" style="-fx-background-color: indianred;" text="Stand" />
+            <Button fx:id="DoubleDownButton4" layoutX="16.0" layoutY="307.0" mnemonicParsing="false" onAction="#dDownClick4" prefHeight="26.0" prefWidth="90.0" style="-fx-background-color: indianred;" text="Double Down" />
+            <Label fx:id="outcome4" layoutX="6.0" layoutY="367.0" prefHeight="26.0" prefWidth="133.0" />
+         </children>
+      </Pane>
+      <Label layoutX="178.0" layoutY="450.0" prefHeight="22.0" prefWidth="75.0" text="Current Money">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentMoney1" layoutX="259.0" layoutY="450.0" prefHeight="22.0" prefWidth="54.0" text="\$" />
+      <ComboBox fx:id="amountOfPlayers" layoutX="13.0" layoutY="469.0" onAction="#amountOfPlayers" prefWidth="150.0" />
+      <Label fx:id="playerSelect" layoutX="12.0" layoutY="450.0" prefHeight="22.0" prefWidth="75.0" text="Player Select">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="337.0" layoutY="450.0" prefHeight="22.0" prefWidth="75.0" text="Current Money">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentMoney2" layoutX="416.0" layoutY="450.0" prefHeight="22.0" prefWidth="54.0" text="\$" />
+      <Label layoutX="337.0" layoutY="471.0" prefHeight="22.0" prefWidth="33.0" text="Bet  $">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="betAmuont2" layoutX="374.0" layoutY="468.0" prefHeight="26.0" prefWidth="47.0" />
+      <Label layoutX="483.0" layoutY="450.0" prefHeight="22.0" prefWidth="75.0" text="Current Money">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="638.0" layoutY="450.0" prefHeight="22.0" prefWidth="75.0" text="Current Money">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentMoney3" layoutX="566.0" layoutY="450.0" prefHeight="22.0" prefWidth="54.0" text="\$" />
+      <Label layoutX="483.0" layoutY="471.0" prefHeight="22.0" prefWidth="33.0" text="Bet  $">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="betAmuont3" layoutX="525.0" layoutY="469.0" prefHeight="26.0" prefWidth="47.0" />
+      <Label layoutX="638.0" layoutY="471.0" prefHeight="22.0" prefWidth="33.0" text="Bet  $">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label fx:id="currentMoney4" layoutX="719.0" layoutY="450.0" prefHeight="22.0" prefWidth="54.0" text="\$" />
+      <TextField fx:id="betAmuont4" layoutX="676.0" layoutY="469.0" prefHeight="26.0" prefWidth="47.0" />
+      <Label fx:id="betError" layoutX="487.0" layoutY="523.0" prefHeight="22.0" prefWidth="75.0">
+         <font>
+            <Font name="Berlin Sans FB" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="330.0" layoutY="525.0" prefHeight="26.0" prefWidth="170.0" text="Select Players to begin" textAlignment="CENTER">
+         <font>
+            <Font name="Berlin Sans FB" size="14.0" />
+         </font>
+      </Label>
+      <Button fx:id="saveBtn" layoutX="691.0" layoutY="526.0" mnemonicParsing="false" onAction="#saveClick" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: lightgrey;" text="Save">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+      <Button fx:id="homeBtn1" layoutX="585.0" layoutY="526.0" mnemonicParsing="false" onAction="#homeClick" prefHeight="37.0" prefWidth="90.0" style="-fx-background-color: lightgrey;" text="Home">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
